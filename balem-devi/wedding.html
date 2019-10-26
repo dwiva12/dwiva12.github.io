@@ -34,10 +34,18 @@
   }
 
   body {
-    font-family: 'bellota-bold';
+    font-family: 'bellota-bold', 'arial', 'helvetica', 'sans-serif';
     font-size: 1.1em;
     color: white;
     text-align: center;
+    background: -webkit-linear-gradient(0deg, #2e0616, #681133, #2e0616);
+  }
+
+  .container {
+    padding: 0 !important;
+    background-color: #4d0a25;
+    box-shadow: 0px 0px 10px #0008;
+    max-width: 720px;
   }
 
   .content {
@@ -46,210 +54,259 @@
 
   .gold {
     background: -webkit-linear-gradient(90deg, #a37136, #c59455, #d39d5d);
-  }
-
-  #judul label {
     font-family:'Sweet Hipster Regular';
     font-weight:normal;
     font-size:2.2em;
-    line-height: 1em;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+
+  #judul label {
+    font-size:2.2em;
+    line-height: 1em;
   }
 
   #bio label {
-    font-family:'Sweet Hipster Regular';
-    font-weight:normal;
     font-size:2em;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-bottom: 0;
+  }
+
+  .time-location {
+    margin: 0.4em auto 0.4em auto;
+    max-width: 340px;
   }
   
-  #waktu-tempat label {
-    font-family:'Sweet Hipster Regular';
-    font-weight:normal;
+  .time-location label {
     font-size:1.8em;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
   }
 
   #salam-pembuka label {
-    font-family:'Sweet Hipster Regular';
-    font-weight:normal;
     font-size:2.1em;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
   }
 
   #salam-penutup label {
-    font-family:'Sweet Hipster Regular';
-    font-weight:normal;
     font-size:2.1em;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  }
+
+  #pembuka p {
+    max-width: 520px;
+    margin: auto;
+  }
+
+  #penutup p {
+    max-width: 520px;
+    margin: auto;
   }
 
   .carousel-caption h3 {
     text-shadow: 0px 2px 4px #00000088;
   }
+
+  .time {
+    border-top: 3px solid #a57d48;
+    border-bottom: 3px solid #a57d48;
+  }
+
+  .time label {
+    display:inline-table;
+    /* height: 48px; */
+    text-align: center;
+    margin: 0;
+  }
+
+  .time .left {
+    width: 22%;
+  }
+
+  .time .center {
+    width: 50%;
+  }
+
+  .time .right {
+    width: 22%;
+  }
+
+  .section-divider {
+    height: 40px;
+    margin: 24px 0;
+    background-image: url("images/section-divider.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
   </style>
 </head>
 <body>
-
-<div class="container" style="padding: 0 !important; background-color: #4d0a25; box-shadow: 0px 0px 10px #888888;">
-  <!--Carousel Wrapper-->
-  <div id="carousel-example-2" class="carousel slide carousel-fade" data-ride="carousel">
-    <!--Indicators-->
-    <ol class="carousel-indicators">
-      <li data-target="#carousel-example-2" data-slide-to="0" class="active"></li>
-      <li data-target="#carousel-example-2" data-slide-to="1"></li>
-      <li data-target="#carousel-example-2" data-slide-to="2"></li>
-      <li data-target="#carousel-example-2" data-slide-to="3"></li>
-    </ol>
-    <!--/.Indicators-->
-    <!--Slides-->
-    <div class="carousel-inner" role="listbox">
-      <div class="carousel-item active">
-        <div class="view">
-          <img class="d-block w-100" src="images/IMG-20191026-WA0000.jpg"
-            alt="First slide">
-          <div class="mask rgba-black-light"></div>
+  <div class="container">
+    <!--Carousel Wrapper-->
+    <div id="my-carousel" class="carousel slide carousel-fade lazy" data-ride="carousel">
+      <!--Indicators-->
+      <ol class="carousel-indicators">
+        <li data-target="#my-carousel" data-slide-to="0" class="active"></li>
+        <li data-target="#my-carousel" data-slide-to="1"></li>
+        <li data-target="#my-carousel" data-slide-to="2"></li>
+        <li data-target="#my-carousel" data-slide-to="3"></li>
+      </ol>
+      <!--/.Indicators-->
+      <!--Slides-->
+      <div class="carousel-inner" role="listbox">
+        <div class="carousel-item active">
+          <div class="view">
+            <img class="d-block w-100" src="images/IMG-20191026-WA0000.jpg"
+              alt="First slide">
+            <div class="mask rgba-black-light"></div>
+          </div>
+          <div class="carousel-caption">
+            <!-- <h3 class="h3-responsive">Kata Favorit</h3> -->
+          </div>
         </div>
-        <div class="carousel-caption">
-          <!-- <h3 class="h3-responsive">Kata Favorit</h3> -->
+        <div class="carousel-item">
+          <!--Mask color-->
+          <div class="view">
+            <img class="d-block w-100" data-src="images/IMG-20191026-WA0001.jpg"
+              alt="Second slide">
+            <div class="mask rgba-black-strong"></div>
+          </div>
+          <div class="carousel-caption">
+            <!-- <h3 class="h3-responsive">Bisa Ditampilkan</h3> -->
+          </div>
+        </div>
+        <div class="carousel-item">
+          <!--Mask color-->
+          <div class="view">
+            <img class="d-block w-100" data-src="images/IMG-20191026-WA0002.jpg"
+              alt="Third slide">
+            <div class="mask rgba-black-slight"></div>
+          </div>
+          <div class="carousel-caption">
+            <!-- <h3 class="h3-responsive">Di Sini</h3> -->
+          </div>
+        </div>
+        <div class="carousel-item">
+          <!--Mask color-->
+          <div class="view">
+            <img class="d-block w-100" data-src="images/IMG-20191026-WA0003.jpg"
+              alt="Fourth slide">
+            <div class="mask rgba-black-slight"></div>
+          </div>
+          <div class="carousel-caption">
+            <!-- <h3 class="h3-responsive">Di Sini</h3> -->
+          </div>
         </div>
       </div>
-      <div class="carousel-item">
-        <!--Mask color-->
-        <div class="view">
-          <img class="d-block w-100" src="images/IMG-20191026-WA0001.jpg"
-            alt="Second slide">
-          <div class="mask rgba-black-strong"></div>
-        </div>
-        <div class="carousel-caption">
-          <!-- <h3 class="h3-responsive">Bisa Ditampilkan</h3> -->
-        </div>
-      </div>
-      <div class="carousel-item">
-        <!--Mask color-->
-        <div class="view">
-          <img class="d-block w-100" src="images/IMG-20191026-WA0002.jpg"
-            alt="Third slide">
-          <div class="mask rgba-black-slight"></div>
-        </div>
-        <div class="carousel-caption">
-          <!-- <h3 class="h3-responsive">Di Sini</h3> -->
-        </div>
-      </div>
-      <div class="carousel-item">
-        <!--Mask color-->
-        <div class="view">
-          <img class="d-block w-100" src="images/IMG-20191026-WA0003.jpg"
-            alt="Fourth slide">
-          <div class="mask rgba-black-slight"></div>
-        </div>
-        <div class="carousel-caption">
-          <!-- <h3 class="h3-responsive">Di Sini</h3> -->
-        </div>
-      </div>
-    </div>
-    <!--/.Slides-->
-    <!--Controls-->
-    <a class="carousel-control-prev" href="#carousel-example-2" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carousel-example-2" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-    <!--/.Controls-->
-  </div>
-  <!--/.Carousel Wrapper-->
-
-  <div class="content">
-    <div id="nama pengantin">
-
-    </div>
-
-    <div id="judul" style="margin-top: 8px;">
-        <label class="gold">Upacara Manusia Yadnya <br> Pawiwahan</label>
-    </div>
-
-    <div id="bio">
-      <div id="man">
-        <label class="gold">
-          Komang Bayu Anggara, Amd. Par
-        </label>
-        <p style="color: white;">
-          Putra ketiga dari pasangan <br>
-          I Ketut Saklit dengan Ni Made Cebleng. <br>
-          Jln. Siligita, Gg Lulut no. B2, Lingkungan Peminge, Nusa Dua
-        </p>
-      </div>
-      <label class="gold" style="display: block; text-align: center;">Dengan</label>
-      <div id="woman">
-        <label class="gold">
-          Ni Kadek Devi Ayuningsih, SH.    
-        </label>
-        <p style="color: white;">
-          Putri kedua dari pasangan <br>
-          I Wayan Kupon dengan Ni Ketut Reni. <br>
-          Jln. Tegik Damai III, Lingkungan Mumbul, Benoa
-        </p>
-      </div>
-    </div>
-
-    <div id="salam-pembuka" style="margin-top: 2em;">
-        <label class="gold">Om Swastyastu</label>
-    </div>
-    <div id="pembuka" style="margin-top: 0.2em; margin-bottom: 0.2em;">
-        <p style="color: white;">
-            Atas Asung Kerta Wara Nugraha Ida Sang Hyang Widhi Wasa/Tuhan Yang Maha Esa. Kami bermaksud menyelenggarakan Upacara Manusia Yadnya Pewiwahan, yang akan diselenggarakan pada.
-        </p>
-    </div>
-
-    <div id="waktu-tempat" style="margin-top: 0.4em; margin-bottom: 0.4em;">
-      <label for="day" class="gold">Kamis </label>
-      <label for="date" class="gold">| 7 November 2019 | </label>
-      <label for="time" class="gold">11:00 AM</label>
-      <label for="location" class="gold" style="display: block; text-align: center;">
-        Jln. Siligita, Gg Lulut no. B2 <br>
-        Nusa Dua
-      </label>
-    </div>
-
-    <div id="penutup" style="margin-top: 0.2em; margin-bottom: 0.2em;">
-        <p style="color: white;">
-            Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu berkenan hadir untuk memberikan doa restu. Atas kehadirannya kami sekeluarga mengucapkan Terima Kasih.
-        </p>
-    </div>
-
-    <div id="salam-penutup" style=" margin-bottom: 2em;">
-        <label class="gold">Om Santih Santih Santih Om</label>
-    </div>
-
-    <div id="salam-penutup" style=" margin-top: 2em; margin-bottom: 10px;">
-      <label class="gold">Denah Lokasi Acara</label>
-  </div>
-
-    <div>
-      <img src="images/maps.svg" style="width: 100%; max-width: 420px;"/>
-    </div>
-    <div id="maps" style="margin-top: 2em; margin-bottom: 2em;">
-      <a href="https://www.google.com/maps?q=-8.806192398071289,115.21941375732422&z=17&hl=en" style="display: block; text-align: center; color: white; text-decoration: none;">
-        <img src="images/google_maps_icon.png" width="64px" height="64px" style="display: block; margin: auto;"/>
-        Buka Google Maps
+      <!--/.Slides-->
+      <!--Controls-->
+      <a class="carousel-control-prev" href="#my-carousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
       </a>
+      <a class="carousel-control-next" href="#my-carousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+      <!--/.Controls-->
+    </div>
+    <!--/.Carousel Wrapper-->
+
+    <div class="content">
+      <div id="nama pengantin">
+
+      </div>
+
+      <div id="judul" style="margin-top: 8px;">
+          <label class="gold">Upacara Manusia Yadnya <br> Pawiwahan</label>
+      </div>
+
+      <div id="bio">
+        <div id="man">
+          <label class="gold">
+            Komang Bayu Anggara, Amd. Par
+          </label>
+          <p style="color: white;">
+            Putra ketiga dari pasangan <br>
+            I Ketut Saklit dengan Ni Made Cebleng. <br>
+            Jln. Siligita, Gg Lulut no. B2, Lingkungan Peminge, Nusa Dua
+          </p>
+        </div>
+        <label class="gold" style="display: block; text-align: center;">Dengan</label>
+        <div id="woman">
+          <label class="gold">
+            Ni Kadek Devi Ayuningsih, SH.    
+          </label>
+          <p style="color: white;">
+            Putri kedua dari pasangan <br>
+            I Wayan Kupon dengan Ni Ketut Reni. <br>
+            Jln. Tegik Damai III, Lingkungan Mumbul, Benoa
+          </p>
+        </div>
+      </div>
+
+      <div class="section-divider"></div>
+
+      <div id="salam-pembuka">
+          <label class="gold">Om Swastyastu</label>
+      </div>
+      <div id="pembuka" style="margin-top: 0.2em; margin-bottom: 0.2em;">
+          <p style="color: white;">
+              Atas Asung Kerta Wara Nugraha Ida Sang Hyang Widhi Wasa/Tuhan Yang Maha Esa. Kami bermaksud menyelenggarakan Upacara Manusia Yadnya Pewiwahan, yang akan diselenggarakan pada.
+          </p>
+      </div>
+
+      <div class="time-location">
+        <div class="time">
+          <label for="day" class="left gold">Kamis</label>
+          <label for="date" class="center gold">| 7 November 2019 |</label>
+          <label for="time" class="right gold">11:00 AM</label>
+        </div>
+        <div class="location">
+          <label for="location" class="gold" style="text-align: center;">
+            Jln. Siligita, Gg Lulut no. B2 <br>
+            Nusa Dua
+          </label>
+        </div>
+      </div>
+
+      <div id="penutup" style="margin-top: 0.2em; margin-bottom: 0.2em;">
+          <p style="color: white;">
+              Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu berkenan hadir untuk memberikan doa restu. Atas kehadirannya kami sekeluarga mengucapkan Terima Kasih.
+          </p>
+      </div>
+
+      <div id="salam-penutup">
+          <label class="gold">Om Santih Santih Santih Om</label>
+      </div>
+
+      <div class="section-divider"></div>
+
+      <div style="margin-bottom: 20px;">
+        <label class="gold">Denah Lokasi Acara</label>
+      </div>
+
+      <div>
+        <img src="images/maps.svg" style="width: 90%; max-width: 420px;"/>
+      </div>
+      <div id="maps" style="margin-top: 2em; margin-bottom: 2em;">
+        <a href="https://www.google.com/maps?q=-8.806192398071289,115.21941375732422&z=17&hl=en" style="display: block; text-align: center; color: white; text-decoration: none;">
+          <img src="images/google_maps_icon.png" width="64px" height="64px" style="display: block; margin: auto;"/>
+          Buka Google Maps
+        </a>
+      </div>
+
+      <div class="section-divider"></div>
     </div>
   </div>
-</div>
-
+  <script language="javascript">
+    $(function() {
+      console.log("funfunfun");
+      return $(".carousel.lazy").on("slide.bs.carousel", function(event) {
+        console.log("slide");
+        var lazy;
+        lazy = $(event.relatedTarget).find("img[data-src]");
+        lazy.attr("src", lazy.data("src"));
+        lazy.removeAttr("data-src");
+      });
+    });
+  </script>
 </body>
 </html>
